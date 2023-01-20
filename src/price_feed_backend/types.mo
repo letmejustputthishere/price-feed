@@ -2,6 +2,11 @@
 // Please use `import service "ic:canister_id"` instead to call canisters on the IC if possible.
 
 module {
+  public type Subaccount = Blob;
+  public type Account = {
+    owner : Principal;
+    subaccount : ?Subaccount;
+  };
   public type DecodedHttpResponse = {
     status : Nat;
     body : Text; // body is Text now

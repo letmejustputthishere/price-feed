@@ -1,15 +1,48 @@
 {
-  "version": 1,
-  "canisters": {
-    "price_feed_backend": {
-      "type": "motoko",
-      "main": "src/price_feed_backend/main.mo"
+    "version": 1,
+    "canisters": {
+        "ledger": {
+            "type": "custom",
+            "candid": "did/ledger.public.did",
+            "wasm": "wasm/ledger_canister.wasm",
+            "remote": {
+                "candid": "did/ledger.public.did",
+                "id": {
+                    "ic": "mc6ru-gyaaa-aaaar-qaaaq-cai"
+                }
+            }
+        },
+        "minter": {
+            "type": "custom",
+            "candid": "did/minter.did",
+            "wasm": "wasm/ckbtc_minter.wasm",
+            "remote": {
+                "candid": "did/minter.public.did",
+                "id": {
+                    "ic": "ml52i-qqaaa-aaaar-qaaba-cai"
+                }
+            }
+        },
+        "price_feed_backend": {
+            "type": "motoko",
+            "main": "src/price_feed_backend/main.mo",
+            "dependencies": ["ledger"]
+        }
+    },
+    "defaults": {
+        "build": {
+            "packtool": "",
+            "args": ""
+        },
+        "bitcoin": {
+            "enabled": true,
+            "nodes": ["127.0.0.1:18444"],
+            "log_level": "info"
+        }
+    },
+    "networks": {
+        "local": {
+            "bind": "127.0.0.1:4943"
+        }
     }
-  },
-  "defaults": {
-    "build": {
-      "packtool": "",
-      "args": ""
-    }
-  }
 }
