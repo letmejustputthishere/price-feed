@@ -4,15 +4,6 @@
     "price_feed_backend": {
       "type": "motoko",
       "main": "src/price_feed_backend/main.mo"
-    },
-    "price_feed_frontend": {
-      "type": "assets",
-      "source": [
-        "src/price_feed_frontend/assets"
-      ],
-      "dependencies": [
-        "price_feed_backend"
-      ]
     }
   },
   "defaults": {
