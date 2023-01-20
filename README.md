@@ -1,3 +1,6 @@
+# intro
+- find the code for the http lecture in the `http` branch
+- find the code for the btc lecture in the `btc` branch
 # price_feed
 
 Welcome to your new price_feed project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
