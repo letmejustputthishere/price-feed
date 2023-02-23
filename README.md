@@ -1,6 +1,6 @@
 # intro
-- find the code for the http lecture in the `http` branch
-- find the code for the btc lecture in the `btc` branch
+- find the code for the [http lecture](https://www.notion.so/HTTPS-Outcalls-Bootcamp-12ed413292e740f7b542459b88f31a96) in the `http` branch
+- find the code for the [btc lecture](https://www.notion.so/BTC-Integration-Bootcamp-ed969b8c3360499e8e16d6b8d407b309) in the `btc` branch
 # price_feed
 
 Welcome to your new price_feed project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
